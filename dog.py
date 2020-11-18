@@ -5,5 +5,5 @@ class Dog:
         print("dog initialized")
 
     def bark(self):
-        print("Woof")
+        print("Woof!")
      
