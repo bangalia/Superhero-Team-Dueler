@@ -14,7 +14,8 @@ if __name__ == "__main__":
 from random import choice
 
 def fight(self,opponent):
-    return choice(self,opponent)
+    
+    return choice(hero1,hero2)
 
 if __name__ == "__main__":
     hero1 = Hero("Storm")
