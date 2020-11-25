@@ -17,9 +17,7 @@ class Hero:
 
     
     def add_ability(self, ability):
-
-    # We use the append method to add ability objects to our list.
-    self.abilities.append(ability)
+        self.abilities.append(ability)
 
     def attack(self):
         print('bolt')
@@ -34,14 +32,13 @@ for ability in hero_abilities:
 
     def attack(self):
         total_damage = 0
-            for ability in self.abilites:
-                total_damage += ability.attack()
+        for ability in self.abilites:
+            total_damage += ability.attack()
             return total_damage
 
 
     def add_armor(self, armor):
-
-    self.armor.append(armor)
+        self.armor.append(armor)
 
     def defend(self):
         defense = 100
