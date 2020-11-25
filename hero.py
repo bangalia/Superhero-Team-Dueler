@@ -10,12 +10,7 @@ class Hero:
         self.armors = list()
         self.name = name
     
-    def fight(self,hero1,hero2):
-        for fight in fight:
-            if self.abilities == 0:
-                return print("draw")
-
-    
+      
     def add_ability(self, ability):
         self.abilities.append(ability)
 
@@ -42,32 +37,38 @@ for ability in hero_abilities:
 
     def defend(self):
         defense = 100
-            if current_health = 0:
-                return defense = 0 
-            else for armor in self.armor:
-                defense += armor.defense
+        if current_health =str(0):
+            return defense = 0 
+         else for armor in self.armor:
+            defense += armor.defense
 
     def take_damage(self, damage):
-        return self.current_health - self.defend.damage     
+        return self.current_health - (self.defend(damage))    
+    
+    def fight(self,hero1,hero2):
+        if len(self.abilities)==0 or len(self.abilities)==0:
+            while(self.is_alive() and opponent.is_alive()):
+                print(f"{self.name} has attacked {opponent.name}")
+                opponent.take_damage(self.attack())
+                print(f"{opponent.name}'s remaining health is {opponent.current_health}")
+                print(f"{opponent.name} has attacked {self.name}")
+                self.take_damage(opponent.attack())
+                print(f"{self.name}'s remaining health is {self.current_health}")
+            
+    
+            if not self.is_alive():
+                print(f"{opponent.name} won!")
+            elif not opponent.is_alive():
+                print(f"{self.name} won!")
+        else:
+            print("Draw!")
 
 
-if __name__ == "__main__":
-    my_hero = Hero("Storm", 150)
-    print(my_hero.name)
-    print(my_hero.current_health)
-
-
-if __name__ == "__main__":
-    hero1 = Hero("Storm")
-    hero2 = Hero("Black Panther")
-
-if _name == "__main__":
-    ability = Ability("Lightning Strike", 80)
-    another_ability = Ability("Plasma Blast", 75)
-    hero = Hero("Storm", 200)
-    hero.add_ability(ability)
-    hero.add_ability(another_ability)
-    print(hero.attack())
+    def is_alive(self):
+        if self.current_health <= 0:
+            return False 
+        else:
+            return True
 
 if __name__ == "__main__":
     hero = Hero("Grace Hopper", 200)
