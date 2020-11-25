@@ -39,4 +39,5 @@ class Team:
             living_opponents.append(hero)
         
         while len(living_heroes) > 0 and len(living_opponents) > 0:
-            
+            random.choice(living_heroes)
+            random.choice(living_opponents)

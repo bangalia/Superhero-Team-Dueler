@@ -75,6 +75,12 @@ class Hero:
         self.deaths = 0
         self.kills = 0
 
+    def add_kill(self, num_kills):
+        self.kills += num_kills
+    
+    def add_death(self, num_deaths):
+        self.deaths += num_deaths
+
 if __name__ == "__main__":
     # If you run this file from the terminal
     # this block is executed.
