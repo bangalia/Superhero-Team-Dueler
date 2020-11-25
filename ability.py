@@ -17,19 +17,11 @@ class Ability:
         random_value = random.randint(0,self.max_damage)
         return random_value
 
-        random.randint(2, 7)
+        #random.randint(2, 7)
 
-    def attack(self):
-      ''' Return a value between 0 and the value set by self.max_damage.'''
-
-      # Pick a random value between 0 and self.max_damage
-      random_value = random.randint(0,self.max_damage)
-      return random_value
-    
-
-if __name__ == "__main__":
+#if __name__ == "__main__":
     # If you run this file from the terminal
     # this block is executed.
-    ability = Ability("Debugging Ability", 20)
-    print(ability.name)
-    print(ability.attack())
+   # ability = Ability("Debugging Ability", 20)
+    #print(ability.name)
+    #print(ability.attack())

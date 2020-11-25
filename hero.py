@@ -1,4 +1,7 @@
-from random import choice
+import random  
+from ability import Ability 
+from armor import Armor
+from weapon import Weapon
 
 class Hero:
     def __init__(self, name, starting_health=100):
@@ -14,38 +17,36 @@ class Hero:
     def add_ability(self, ability):
         self.abilities.append(ability)
 
-    def attack(self):
-        print('bolt')
+#abilities = list()
 
-abilities = list()
+#abilities.append(Hero())
+#abilities.append(Hero())
 
-abilities.append(Hero())
-abilities.append(Hero())
+#for ability in hero_abilities:
+    #ability.attack()
 
-for ability in hero_abilities:
-    ability.attack()
-
+    def add_armor(self, armor):
+        self.armor.append(armor)
+    
+    def add_weapon(self,weapon):
+        self.weapon.append(ability)
+    
     def attack(self):
         total_damage = 0
         for ability in self.abilites:
             total_damage += ability.attack()
-            return total_damage
-
-
-    def add_armor(self, armor):
-        self.armor.append(armor)
+            return int(total_damage)
 
     def defend(self):
-        defense = 100
-        if current_health =str(0):
-            return defense = 0 
-         else for armor in self.armor:
-            defense += armor.defense
+        defense = 0
+        for armor in self.armor:
+            defense += armor.defense()
+        return defense
 
     def take_damage(self, damage):
-        return self.current_health - (self.defend(damage))    
+        return self.current_health - (damage+self.defend(damage))    
     
-    def fight(self,hero1,hero2):
+    def fight(self,opponent):
         if len(self.abilities)==0 or len(self.abilities)==0:
             while(self.is_alive() and opponent.is_alive()):
                 print(f"{self.name} has attacked {opponent.name}")
@@ -69,11 +70,24 @@ for ability in hero_abilities:
             return False 
         else:
             return True
+    
+    def __init__(self,name,health=100):
+        self.deaths = 0
+        self.kills = 0
 
 if __name__ == "__main__":
-    hero = Hero("Grace Hopper", 200)
-    shield = Armor("Shield", 50)
-    hero.add_armor(shield)
-    hero.take_damage(50)
-    print(hero.current_health)
+    # If you run this file from the terminal
+    # this block is executed.
+
+    hero1 = Hero("Wonder Woman")
+    hero2 = Hero("Dumbledore")
+    ability1 = Ability("Super Speed", 300)
+    ability2 = Ability("Super Eyes", 130)
+    ability3 = Ability("Wizard Wand", 80)
+    ability4 = Ability("Wizard Beard", 20)
+    hero1.add_ability(ability1)
+    hero1.add_ability(ability2)
+    hero2.add_ability(ability3)
+    hero2.add_ability(ability4)
+    hero1.fight(hero2)
 
