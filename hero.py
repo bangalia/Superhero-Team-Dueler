@@ -4,7 +4,7 @@ from armor import Armor
 from weapon import Weapon
 
 class Hero:
-    def __init__(self, name, starting_health=100,abilities,armor):
+    def __init__(self, name, starting_health=100,):
 
         self.name = name 
         self.starting_health = starting_health
