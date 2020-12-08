@@ -29,7 +29,7 @@ class Hero:
         self.armor.append(armor)
     
     def add_weapon(self,weapon):
-        self.weapon.append(ability)
+        self.weapon.append(weapon)
     
     def attack(self):
         total_damage = 0
